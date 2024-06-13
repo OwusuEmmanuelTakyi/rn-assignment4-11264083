@@ -30,7 +30,7 @@ export default function LoginScreen() {
         value={email}
         onChangeText={setEmail}
       />
-         <TouchableOpacity className=' bg-blue-500 rounded-lg w-3/4 p-3 mb-4 '
+         <TouchableOpacity className=' bg-[#356899] rounded-lg w-[327px] p-3 mb-4 '
         onPress={handleLogin}
       >
         <Text className=' text-white text-center'>Log in</Text>
