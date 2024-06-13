@@ -1,14 +1,16 @@
 import { View, Text, SafeAreaView, TextInput, Button, TouchableOpacity, Image } from 'react-native'
 import React, {useState} from 'react'
+import { useNavigation } from '@react-navigation/native';
 
 
 
 export default function LoginScreen() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const navigation = useNavigation();
 
   const handleLogin = () => {
-    console.log('You tapped the button!');
+    navigation.navigate('Home', { name, email });
   };
   return (
    
@@ -37,7 +39,7 @@ export default function LoginScreen() {
       </TouchableOpacity>
 
       </View>
-           <View className='pl-[30px]pr-[30px] pt-[100px]  flex items-center justify-center'>
+           <View className='pl-[30px]pr-[30px] pt-[90px]  flex items-center justify-center'>
            <View className=' flex-row items-center my-4 w-3/4'>
         <View className='flex-1 h-0.5 bg-black' />
         <View>
@@ -67,7 +69,7 @@ export default function LoginScreen() {
       </View>
               </View>
                                             
-              <View className='pt-[100px] flex-row '>
+              <View className='pt-[30px] flex-row '>
               <Text>Haven't an account?</Text>
                    <TouchableOpacity onPress={() =>{
             console.log('You tapped the button!');
