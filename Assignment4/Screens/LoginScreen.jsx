@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TextInput, Button, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, TextInput, Button, TouchableOpacity, Image } from 'react-native'
 import React, {useState} from 'react'
 
 
@@ -38,20 +38,36 @@ export default function LoginScreen() {
 
       </View>
            <View className='pl-[30px]pr-[30px] pt-[100px]  flex items-center justify-center'>
-           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                 <View style={{flex: 1, height:1, backgroundColor: 'black'}} />
-                    <View>
-                       <Text style={{width: 135, textAlign: 'center'}}>Or continue with</Text>
-                   </View>
-                     <View style={{flex: 1,width: 10, height: 1, backgroundColor: 'black'}} />
-                 </View>
+           <View className=' flex-row items-center my-4 w-3/4'>
+        <View className='flex-1 h-0.5 bg-black' />
+        <View>
+          <Text className='w-32 text-center'>Or continue with</Text>
+        </View>
+        <View className='flex-1 h-0.5 bg-black' />
+      </View>
            
              
               <View>
-                  
+              <View className='flex-row justify-center'>
+        <TouchableOpacity className=''>
+        <View className='bg-white rounded-full p-3 shadow'>
+          <Image source={require('../assets/apple.png')} className='w-10 h-10' />
+        </View>
+        </TouchableOpacity>
+        <TouchableOpacity className=''>
+        <View className='bg-white rounded-full p-3 shadow'>
+          <Image source={require('../assets/google.png')} className='w-10 h-10' />
+         </View>
+        </TouchableOpacity>
+        <TouchableOpacity >
+        <View className='bg-white rounded-full p-3 shadow'>
+          <Image source={require('../assets/facebook.png')} className='w-10 h-10' />
+       </View>
+        </TouchableOpacity>
+      </View>
               </View>
                                             
-              <View className='pt-[150px] flex-row '>
+              <View className='pt-[100px] flex-row '>
               <Text>Haven't an account?</Text>
                    <TouchableOpacity onPress={() =>{
             console.log('You tapped the button!');
@@ -59,7 +75,7 @@ export default function LoginScreen() {
           <Text style={{ color: 'blue' }}> Register</Text>
                   </TouchableOpacity>
               </View>
-
+                 
               </View>
 
     </View>
