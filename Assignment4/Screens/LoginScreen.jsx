@@ -13,12 +13,12 @@ export default function LoginScreen() {
     navigation.navigate('Home', { name, email });
   };
   return (
-   
+  
     <View className="flex-1 bg-white">
       <View className='pl-10 pt-[100px]'>
-         <Text className='text-[20px] font-bold '>Jobizz 👋</Text>
-         <Text className='text-[30px] font-black' >Welcome Back</Text>
-         <Text className='text-[15px] '>Let's log in. Apply to jobs</Text>
+         <Text className='text-[20px] font-bold text-[#356899] '>Jobizz </Text>
+         <Text className='text-[30px] font-black text-[#0D0D26]' >Welcome Back 👋</Text>
+         <Text className='text-[15px] text-gray-500'>Let's log in. Apply to jobs</Text>
       </View>
       <View className='flex items-center justify-center pt-[70px]'>
       <TextInput className='h-10 border border-gray-300 rounded-lg w-3/4 p-2 mb-4'
@@ -57,12 +57,12 @@ export default function LoginScreen() {
         </View>
         </TouchableOpacity>
         <TouchableOpacity className=''>
-        <View className='bg-white rounded-full p-3 shadow'>
+        <View className='p-3 shadow'>
           <Image source={require('../assets/google.png')} className='w-10 h-10' />
          </View>
         </TouchableOpacity>
         <TouchableOpacity >
-        <View className='bg-white rounded-full p-3 shadow'>
+        <View className='p-3 shadow'>
           <Image source={require('../assets/facebook.png')} className='w-10 h-10' />
        </View>
         </TouchableOpacity>
@@ -81,6 +81,7 @@ export default function LoginScreen() {
               </View>
 
     </View>
+    
    
   )
 }

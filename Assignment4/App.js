@@ -14,13 +14,11 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
       <Stack.Navigator initialRouteName="SignUp">
-        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ title: 'login' }} />
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ title: 'login', headerShown:false }} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home', headerShown:false }}  />
       </Stack.Navigator>
     </NavigationContainer>
        
     </View>
   );
 }
-
-
